@@ -5,6 +5,8 @@
 <title>Checklist Geral</title>
 
 <style>
+    
+
     body {
         font-family: "Segoe UI", Arial, sans-serif;
         background: linear-gradient(180deg, #061633, #0a1f44);
@@ -13,7 +15,7 @@
     }
 
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         background: linear-gradient(180deg, #061633, #0a1f44);
         padding: 25px;
@@ -72,7 +74,17 @@
         
         background-color:#FC5C00;
         color:black;   
+        border-radius: 12px;
+        width: 10%;
         
+    }
+
+    
+    td.nao_bt {
+         padding: 24px 48px;
+        width: 10%;
+        border-radius: 50px;
+    
         
     }
 
@@ -113,7 +125,65 @@
         background-color: #fafafa;
         white-space: pre-wrap;
     }
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h2, h3, h4, h5 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    /* Produto / pergunta */
+    td.produto {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /* Sim / Não maiores para toque */
+    td.sim_bt,
+    td.nao_bt {
+        width: 50%;
+        padding: 15px 0;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.5);
+    }
+
+    /* Textarea mais confortável */
+    textarea {
+        font-size: 14px;
+        min-height: 60px;
+    }
+
+    /* Botão */
+    .btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* Bloco de notas */
+    .bloco-notas {
+        width: 100%;
+        height: 300px;
+        font-size: 13px;
+    }
+}
+
 </style>
+
 </head>
 
 <body>
@@ -134,7 +204,7 @@
     <tbody id="tabela-CHECKLIST-GERAL"></tbody>
 </table>
 
-<h3> Checklist de Divergências Padrões da ordem do técnico.</h3>
+<h3> Checklist de Divergências.</h3>
 
 <table>
     <thead>
@@ -263,7 +333,7 @@ function coletarDados() {
 
 
     tbody_1.querySelectorAll("tr").forEach((linha, index ) => {
-        const resposta = linha.querySelector(`input[name="resposta-${index}"]:checked`);
+        
         const obs = linha.querySelector("textarea")?.value || "";
 
         
