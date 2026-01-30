@@ -203,8 +203,8 @@ CHECKLIST.forEach((item, index) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
         <td class="produto">${item}</td>
-        <td class= "sim_bt"><input type="radio" name="resposta-${index}" value="Sim"></td>
-        <td class= "nao_bt"><input type="radio" name="resposta-${index}" value="Não"></td>
+        <td class= "sim_bt"><input type="radio" name="checklist-${index}" value="Sim"></td>
+        <td class= "nao_bt"><input type="radio" name="checklist-${index}" value="Não"></td>
         <td><textarea></textarea></td>
     `;
     tbody.appendChild(tr);
@@ -214,8 +214,8 @@ CHECKLIST_divergencia.forEach((item, index) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
         <td class="produto">${item}</td>
-        <td class= "sim_bt"><input type="radio" name="resposta-${index}" value="Sim"></td>
-        <td class= "nao_bt"><input type="radio" name="resposta-${index}" value="Não"></td>
+        <td class= "sim_bt"><input type="radio" name="divergencia-${index}" value="Sim"></td>
+        <td class= "nao_bt"><input type="radio" name="divergencia-${index}" value="Não"></td>
         <td><textarea></textarea></td>
     `;
     tbody_2.appendChild(tr);
@@ -236,7 +236,7 @@ function coletarDados() {
     let texto = "";
 
     tbody.querySelectorAll("tr").forEach((linha, index) => {
-        const resposta = linha.querySelector(`input[name="resposta-${index}"]:checked`);
+        const resposta = linha.querySelector(`input[name="checklist-${index}"]:checked`);
         const obs = linha.querySelector("textarea")?.value || "";
 
         
@@ -249,7 +249,7 @@ function coletarDados() {
     });
 
      tbody_2.querySelectorAll("tr").forEach((linha, index) => {
-        const resposta = linha.querySelector(`input[name="resposta-${index}"]:checked`);
+        const resposta = linha.querySelector(`input[name="divergencia-${index}"]:checked`);
         const obs = linha.querySelector("textarea")?.value || "";
 
         
