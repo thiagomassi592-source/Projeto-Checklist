@@ -1,0 +1,200 @@
+ body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(180deg, #061633, #0a1f44);
+        margin: 0;
+        padding: 20px;
+    }
+
+
+    .btn-padrao,.btn-limpar  {
+       /* position: fixed;*/
+        top: 20px;
+        /*right: 20px; */
+        left: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        background-color: #FC5C00;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .btn-limpar {
+        left: 130px; /* distância do botão padrão */
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .btn-padrao:hover {
+        opacity: 0.9;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        background: linear-gradient(180deg, #061633, #0a1f44);
+        padding: 25px;
+        border-radius: 6px;
+        box-shadow:  #ffffff;
+    }
+
+    h2, h3, h4, h5 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #FC5C00;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+        background: linear-gradient(180deg, #061633, #0a1f44);
+    
+    }
+
+    thead {
+        background-color:linear-gradient(180deg, #061633, #0a1f44);
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    th {
+        text-align: center;
+        font-weight: bold;
+         background-color:white;
+      
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+       
+    }
+
+    td.produto {
+        text-align: left;
+        width: 55%;
+        background-color:white;
+        color:black;   
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+
+    td.sim_bt {
+        
+        background-color:#FC5C00;
+        color:black;   
+        border-radius: 12px;
+        width: 10%;
+        
+    }
+
+    
+    td.nao_bt {
+         padding: 24px 48px;
+        width: 10%;
+        border-radius: 50px;
+    
+        
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 40px;
+        resize: vertical;
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+
+    .btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 30px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .bloco-notas {
+        width: 70%;
+        height: 500px;
+        padding: 15px;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background-color: #fafafa;
+        white-space: pre-wrap;
+    }
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h2, h3, h4, h5 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    /* Produto / pergunta */
+    td.produto {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /* Sim / Não maiores para toque */
+    td.sim_bt,
+    td.nao_bt {
+        width: 50%;
+        padding: 15px 0;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.5);
+    }
+
+    /* Textarea mais confortável */
+    textarea {
+        font-size: 14px;
+        min-height: 60px;
+    }
+
+    /* Botão */
+    .btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* Bloco de notas */
+    .bloco-notas {
+        width: 100%;
+        height: 300px;
+        font-size: 13px;
+    }
+}
